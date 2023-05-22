@@ -1,0 +1,205 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(#f1fff7, white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Heading styles */
+h1 {
+font-size: 24px;
+text-align: center;
+margin-bottom: 20px;
+color: #333;
+}
+
+/* Add Todo section styles */
+.add-todo {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+#todo-input {
+flex: 1;
+padding: 10px;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+background-color: #f9f9f9;
+}
+
+#add-button {
+margin-left: 10px;
+padding: 10px 20px;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#add-button:hover {
+background: linear-gradient(#45a049, rgb(48, 187, 233));
+transform: scale(1.1);
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Add box-shadow with glow effect */
+}
+
+/* To-do list styles */
+ul {
+padding: 0;
+}
+
+li {
+display: flex;
+align-items: center;
+padding: 15px;
+border-radius: 4px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+margin-bottom: 10px;
+transition: box-shadow 0.3s ease;
+position: relative;
+}
+
+li:last-child {
+margin-bottom: 0;
+}
+
+li:hover {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Completed item styles */
+ul li.completed {
+text-decoration:solid;
+background-color: #f2f2f2;
+opacity: 1;
+transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+ul li.completed input[type="checkbox"] {
+pointer-events: none;
+}
+
+ul li.completed span {
+color: #888;
+}
+
+ul li.completed button {
+display: none;
+}
+
+/* Checkbox styles */
+input[type="checkbox"] {
+margin-right: 10px;
+cursor: pointer;
+}
+
+/* Button styles */
+button {
+padding: 5px 10px;
+background-color: #ff4d4d;
+color: #fff;
+border: none;
+border-radius: 4px;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-left: auto;
+order: 2;
+}
+
+button:hover {
+background-color: #ff3333;
+transform: scale(1.1);
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Add box-shadow with glow effect */
+}
+
+/* Total tasks styles */
+#total-tasks {
+text-align: center;
+margin-top: 20px;
+font-size: 16px;
+color: #666;
+}
+
+/* Focus styles */
+input:focus,
+button:focus {
+outline: 2px solid #4CAF50;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+from {
+    opacity: 0;
+    transform: translateY(10px); /* Add initial translateY value */
+}
+to {
+    opacity: 1;
+    transform: translateY(0); /* Change translateY to 0 */
+}
+}
+
+li {
+/* Add animation properties */
+animation-name: fade-in;
+animation-duration: 0.8s;
+animation-timing-function: ease-in;
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(-10deg);
+    }
+    50% {
+        transform: rotateZ(10deg);
+    }
+    75% {
+        transform: rotateZ(-10deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+/* To-do header styles */
+.to-do-header {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.to-do-header.animate {
+    animation-name: wiggle;
+}
+
+.to-do-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}

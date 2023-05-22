@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="to-do-header"><img src="images/icon.ico"> TODO LIST</h1>
+
+        <!-- Add Todo section -->
+        <div class="add-todo">
+        <input type="text" id="todo-input" placeholder="Add a new task" aria-label="Add a new task">  
+        <button id="add-button" aria-label="Add">Add</button>
+        </div>
+
+        <!-- To-do List section -->
+        <ul id="todo-list"></ul>
+        
+        <!-- Total tasks counter -->
+        <div id="total-tasks" role="status"></div>
+        
+        <button id="focus-trap" style="position: absolute; left: -9999px;">Focus Trap</button>
+
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
